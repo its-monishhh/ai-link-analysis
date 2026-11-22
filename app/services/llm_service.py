@@ -3,6 +3,8 @@ import json
 import re
 from dataclasses import dataclass
 from typing import Optional
+import asyncio
+
 
 import httpx
 
@@ -10,7 +12,9 @@ from app.config import Settings
 
 
 class LLMError(Exception):
-    pass
+    def __init__(self, message: str, status: Optional[int] = None):
+        super().__init__(message)
+        self.status = status
 
 
 @dataclass
@@ -55,7 +59,7 @@ async def _call_anthropic(system: str, user: str, model: str, s: Settings) -> LL
 
 async def _call_gemini(system: str, user: str, model: str, s: Settings) -> LLMResult:
     if not s.gemini_api_key:
-        raise LLMError("GEMINI_API_KEY is not configured.")
+            raise LLMError(f"Gemini API error {r.status_code}", r.status_code)
     async with httpx.AsyncClient(timeout=s.llm_timeout_seconds) as c:
         r = await c.post(
             f"https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent",
@@ -83,7 +87,16 @@ async def complete(system: str, user: str, provider: str, model: str, s: Setting
     fn = _PROVIDERS.get(provider)
     if not fn:
         raise LLMError(f"Unknown provider '{provider}'.")
-    try:
-        return await fn(system, user, model, s)
-    except httpx.HTTPError as e:
-        raise LLMError(f"{provider} request failed: {type(e).__name__}")
+    last: Exception = LLMError("LLM call failed.")
+    for delay in (0, 2, 5, 10):          # retry transient errors with backoff
+        if delay:
+            await asyncio.sleep(delay)
+        try:
+            return await fn(system, user, model, s)
+        except LLMError as e:
+            if e.status not in (429, 500, 502, 503, 504):
+                raise                     # key/model problems: don't retry
+            last = e
+        except httpx.HTTPError as e:
+            last = LLMError(f"{provider} request failed: {type(e).__name__}")
+    raise last
