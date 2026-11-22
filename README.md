@@ -59,7 +59,297 @@ meta {model, cached, pages_analyzed, content_chars, elapsed_seconds, input_token
 <!-- TODO: paste the real JSON you got from the live API for basecamp.com here -->
 
 ```json
-PASTE REAL RESPONSE HERE
+{
+  "success": true,
+  "website": "https://basecamp.com",
+  "brand": {
+    "name": "Basecamp",
+    "category": "Project Management Software",
+    "summary": "Basecamp is a straightforward, easy-to-use project management and team collaboration platform that puts tasks, files, discussions, and schedules in one place to help teams get work done calmly and efficiently."
+  },
+  "analysis": {
+    "competitor_analysis": {
+      "brand_overview": "Basecamp is a pioneer in project management software, known for its calm, all-in-one approach and flat-rate pricing, distinguishing itself from bloated alternatives.",
+      "main_category": "Project Management & Collaboration Software",
+      "main_products_services": [
+        "Project Management Platform",
+        "Message Boards",
+        "To-dos",
+        "Card Tables (Kanban)",
+        "Chats & Pings",
+        "Calendar",
+        "Docs & Files",
+        "Automatic Check-ins"
+      ],
+      "competitors": [
+        {
+          "name": "Asana",
+          "website": "https://asana.com",
+          "strengths": [
+            "Advanced workflow builder",
+            "Extensive integrations",
+            "Flexible views"
+          ],
+          "weaknesses": [
+            "Can be complex and overwhelming",
+            "Per-user pricing gets expensive"
+          ],
+          "source": "ai_generated_suggestion"
+        },
+        {
+          "name": "Trello",
+          "website": "https://trello.com",
+          "strengths": [
+            "Intuitive Kanban interface",
+            "Easy to get started",
+            "Good free tier"
+          ],
+          "weaknesses": [
+            "Lacks built-in native docs and messaging",
+            "Requires power-ups for robust functionality"
+          ],
+          "source": "ai_generated_suggestion"
+        },
+        {
+          "name": "Monday.com",
+          "website": "https://monday.com",
+          "strengths": [
+            "Highly visual dashboards",
+            "Great customization",
+            "Strong automation capabilities"
+          ],
+          "weaknesses": [
+            "Steep learning curve",
+            "Complex tiered pricing structure"
+          ],
+          "source": "ai_generated_suggestion"
+        }
+      ],
+      "comparison_table": [
+        {
+          "comparison": "Pricing Model",
+          "your_brand": "Affordable flat-rate or simple packaging",
+          "competitor": "Per-user pricing that scales up quickly"
+        },
+        {
+          "comparison": "Interface Complexity",
+          "your_brand": "Famously straightforward and calm",
+          "competitor": "Feature-heavy with steep learning curves"
+        },
+        {
+          "comparison": "Customer Service",
+          "your_brand": "24/7/365 human support by knowledgeable staff",
+          "competitor": "Mostly tiered ticketing systems and chatbots"
+        }
+      ],
+      "strengths": [
+        "20+ years of proven market longevity and brand trust",
+        "All-in-one feature set reduces app fatigue",
+        "Durable infrastructure with 99.99% uptime",
+        "Exceptional 24/7 human customer support"
+      ],
+      "opportunities": [
+        "Expand positioning for AI-agent connectivity (Claude, ChatGPT, etc.)",
+        "Target growing remote and hybrid small businesses seeking calm workflows",
+        "Capture dissatisfied users escaping bloated, expensive competitors"
+      ],
+      "note": "Competitors are AI-generated suggestions, not verified market research."
+    },
+    "target_search_queries": [
+      {
+        "query": "simple project management software for small teams",
+        "platforms": [
+          "Google",
+          "LinkedIn"
+        ],
+        "intent": "Commercial",
+        "business_relevance": "Directly targets customers looking for straightforward tools instead of bloated enterprise software.",
+        "target_audience": "Small business owners, project managers, team leads"
+      },
+      {
+        "query": "best calm project management app",
+        "platforms": [
+          "Google",
+          "X"
+        ],
+        "intent": "Informational",
+        "business_relevance": "Aligns with Basecamp's core brand messaging of providing a calm workspace.",
+        "target_audience": "Professionals experiencing app fatigue"
+      },
+      {
+        "query": "how to manage client projects in one place",
+        "platforms": [
+          "Google",
+          "LinkedIn"
+        ],
+        "intent": "Informational",
+        "business_relevance": "Connects with Basecamp's capability to work smoothly with clients.",
+        "target_audience": "Agency owners, consultants, freelancers"
+      },
+      {
+        "query": "Basecamp vs Asana project management",
+        "platforms": [
+          "Google"
+        ],
+        "intent": "Commercial",
+        "business_relevance": "Captures high-intent users actively comparing software options before purchasing.",
+        "target_audience": "Evaluating buyers and IT decision-makers"
+      },
+      {
+        "query": "project management tool with integrated chat and kanban",
+        "platforms": [
+          "Google",
+          "Facebook"
+        ],
+        "intent": "Commercial",
+        "business_relevance": "Highlights specific built-in features like Chats & Pings and Card Tables.",
+        "target_audience": "Operations managers, team coordinators"
+      }
+    ],
+    "seo_improvements": {
+      "primary_keyword": "project management platform",
+      "secondary_keywords": [
+        "team collaboration software",
+        "manage projects online",
+        "small business project management"
+      ],
+      "long_tail_keywords": [
+        "simple project management software for remote teams",
+        "all in one project management and client communication"
+      ],
+      "business_keywords": [
+        "Basecamp",
+        "project management",
+        "task tracking",
+        "kanban boards"
+      ],
+      "recommended_title": "Basecamp: The Calm, All-in-One Project Management Platform",
+      "title_structure": "Brand: Value Proposition & Core Offering",
+      "meta_description": "Trusted by millions, Basecamp puts everything you need to get work done in one place. Manage projects, work with clients, and communicate company-wide.",
+      "supporting_content": [
+        "Customer success stories and case studies",
+        "Live product demonstration webinars and classes",
+        "Guides on transitioning from bloated apps to calm project management"
+      ]
+    },
+    "top_services": [
+      {
+        "name": "Project Management & Task Tracking",
+        "description": "Organize work using to-do lists, milestones, and card tables to track accountability and ensure deadlines are met.",
+        "target_industry": "Cross-industry",
+        "target_customer": "Teams and businesses of all sizes",
+        "main_benefit": "Brings all tasks and project details into a single, organized place",
+        "source": "website"
+      },
+      {
+        "name": "Internal Communication & Chat",
+        "description": "Communicate company-wide using message boards for announcements and chats & pings for group or direct messaging.",
+        "target_industry": "Cross-industry",
+        "target_customer": "Remote, hybrid, and in-office teams",
+        "main_benefit": "Replaces fragmented email chains and external chat apps with clear, searchable discussions",
+        "source": "website"
+      },
+      {
+        "name": "Document & File Storage",
+        "description": "Store, organize, and share project assets, images, and documents securely within the platform.",
+        "target_industry": "Cross-industry",
+        "target_customer": "Designers, marketers, publishers, and creators",
+        "main_benefit": "Keeps all necessary files right next to the projects and tasks they belong to",
+        "source": "website"
+      },
+      {
+        "name": "Client Collaboration",
+        "description": "Work directly with external clients inside projects while keeping internal notes private and secure.",
+        "target_industry": "Agencies, Consulting, Professional Services",
+        "target_customer": "Account managers, consultants, and agency owners",
+        "main_benefit": "Simplifies client communication and keeps stakeholders aligned without extra tools",
+        "source": "website"
+      },
+      {
+        "name": "AI Agent Integration",
+        "description": "Connect AI agents such as Claude, ChatGPT, Muse, and Grok Bot directly to your workflow.",
+        "target_industry": "Technology, Software, Digital Marketing",
+        "target_customer": "Tech-forward teams and developers",
+        "main_benefit": "Enhances productivity by integrating modern AI assistants smoothly into daily tasks",
+        "source": "website"
+      }
+    ],
+    "target_audience": {
+      "primary_audience": [
+        "Small and medium-sized business owners",
+        "Project managers",
+        "Team leads and department heads"
+      ],
+      "secondary_audience": [
+        "Freelancers and consultants",
+        "Non-profit organizations",
+        "Remote and hybrid teams"
+      ],
+      "industries": [
+        "Product development",
+        "Woodworking",
+        "Music industry",
+        "Logistics",
+        "Publishing",
+        "Event planning",
+        "Marketing",
+        "Architecture",
+        "Software design",
+        "Education"
+      ],
+      "business_types": [
+        "Small businesses",
+        "Agencies",
+        "Non-profits",
+        "Enterprises"
+      ],
+      "customer_profiles": [
+        "Jugglers of multiple projects and client expectations",
+        "Teams suffering from app fatigue and bloated software",
+        "Leaders looking for calm, dependable infrastructure"
+      ],
+      "geographic_focus": "Worldwide",
+      "customer_needs": [
+        "A straightforward, easy-to-use system to manage work",
+        "Consolidation of scattered apps and browser tabs",
+        "Reliable uptime and dependable 24/7 human customer service",
+        "Affordable pricing for growing teams"
+      ],
+      "customer_interests": [
+        "Productivity and organization",
+        "Calm work culture",
+        "Streamlined client communication",
+        "AI workflow integrations"
+      ],
+      "recommended_segments": [
+        {
+          "audience": "Agency Owners",
+          "business_type": "Marketing & Creative Agencies",
+          "requirement": "Clean client collaboration and reliable task tracking without complex enterprise bloat."
+        },
+        {
+          "audience": "Small Business Teams",
+          "business_type": "SMBs",
+          "requirement": "An affordable, all-in-one platform to replace multiple chat, storage, and project apps."
+        },
+        {
+          "audience": "Remote Team Leads",
+          "business_type": "Distributed Companies",
+          "requirement": "Centralized messaging, check-ins, and shared calendars to maintain team alignment across time zones."
+        }
+      ]
+    }
+  },
+  "meta": {
+    "model": "gemini-3.5-flash-lite",
+    "cached": false,
+    "pages_analyzed": 3,
+    "content_chars": 5342,
+    "elapsed_seconds": 7.08,
+    "input_tokens": 1921,
+    "output_tokens": 2459
+  }
+}
 ```
 
 ### Screenshots
