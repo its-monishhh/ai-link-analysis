@@ -27,9 +27,13 @@ async def _validation_handler(_: Request, exc: RequestValidationError):
     return _err(422, "invalid_request", "Request body must be JSON like {\"url\": \"https://example.com\"}.")
 
 
-@app.get("/health", include_in_schema=False)
+@app.api_route("/health", methods=["GET", "HEAD"], include_in_schema=False)
 async def health():
     return {"status": "ok"}
+@app.api_route("/", methods=["GET", "HEAD"], include_in_schema=False)
+async def root():
+    return RedirectResponse(url="/docs")
+
 
 
 @app.post("/link-analysis", response_model=LinkAnalysisResponse,
